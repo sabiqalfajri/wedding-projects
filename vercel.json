@@ -2,7 +2,7 @@
     "rewrites": [
         {
             "source": "/Syukron-dan-Dhian(/.*)?",
-            "destination": "/Syukron-dan-Dhian/index.html",
+            "destination": "/Syukron-dan-Dhian/index.html"
         }
     ],
     "cleanUrls": true,
