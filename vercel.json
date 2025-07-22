@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/Syukron-dan-Dhian(/.*)?",
+            "destination": "/Syukron-dan-Dhian/index.html"
+        }
+    ]
+}
