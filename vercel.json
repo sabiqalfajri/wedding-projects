@@ -1,7 +1,15 @@
 {
     "rewrites": [
         {
-            "source": "/Syukron-dan-Dhian(/.*)?",
+            "source": "/Syukron-dan-Dhian",
+            "destination": "/Syukron-dan-Dhian/index.html"
+        },
+        {
+            "source": "/Syukron-dan-Dhian",
+            "destination": "/Syukron-dan-Dhian/index.html"
+        },
+        {
+            "source": "/Syukron-dan-Dhian",
             "destination": "/Syukron-dan-Dhian/index.html"
         }
     ],
