@@ -14,6 +14,7 @@ import "../components/comment.js"
 import * as confetti from '../../libs/confetti.js';
 
 export const guest = (() => {
+    console.log('guest.js jalan');
 
     /**
      * @type {ReturnType<typeof storage>|null}
