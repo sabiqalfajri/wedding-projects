@@ -1,18 +1,18 @@
 {
-    "rewrites": [
-        {
-            "source": "/Syukron-dan-Dhian",
-            "destination": "/Syukron-dan-Dhian/index.html"
-        },
-        {
-            "source": "/Syukron-dan-Dhian",
-            "destination": "/Syukron-dan-Dhian/index.html"
-        },
-        {
-            "source": "/Syukron-dan-Dhian",
-            "destination": "/Syukron-dan-Dhian/index.html"
-        }
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/Syukron-dan-Dhian",
+      "destination": "/Syukron-dan-Dhian/index.html"
+    },
+    {
+      "source": "/Syukron-dan-Dhian/",
+      "destination": "/Syukron-dan-Dhian/index.html"
+    },
+    {
+      "source": "/Syukron-dan-Dhian/index.html",
+      "destination": "/Syukron-dan-Dhian/index.html"
+    }
+  ]
 }
