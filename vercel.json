@@ -11,7 +11,7 @@
       "destination": "/Syukron-dan-Dhian/index.html"
     },
     {
-      "source": "/Syukron-dan-Dhian/index.html",
+      "source": "/Syukron-dan-Dhian/**",
       "destination": "/Syukron-dan-Dhian/index.html"
     }
   ]
