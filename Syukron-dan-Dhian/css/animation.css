@@ -58,3 +58,7 @@
 .slide-desktop-active {
     transform: scale(1.15);
 }
+
+.carousel-item {
+    will-change: transform, opacity;
+}
