@@ -36,14 +36,28 @@ export const image = (() => {
      * @param {string} src 
      * @returns {Promise<void>}
      */
-    const appendImage = (el, src) => loadedImage(src).then((img) => {
-        el.width = img.naturalWidth;
-        el.height = img.naturalHeight;
-        el.src = img.src;
-        img.remove();
+    
+    const appendImage = (el, src) => {
+        return new Promise((res, rej) => {
+            const img = new Image();
+            img.src = src;
 
-        progress.complete('image');
-    });
+            img.decode()
+                .then(() => {
+                    el.width = img.naturalWidth;
+                    el.height = img.naturalHeight;
+                    el.src = img.src;
+                    progress.complete('image');
+                    res();
+                })
+                .catch((err) => {
+                    console.error(err);
+                    progress.invalid('image');
+                    rej(err);
+                });
+        });
+    };
+
 
     /**
      * @param {HTMLImageElement} el 
