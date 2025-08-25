@@ -88,27 +88,35 @@ export const util = (() => {
      * @param {number} step
      * @returns {Promise<HTMLElement>}
      */
-    const changeOpacity = (el, isUp, step = 0.05) => new Promise((res) => {
-        let op = parseFloat(el.style.opacity);
-        const target = isUp ? 1 : 0;
+    const changeOpacity = (el, isUp) => new Promise((res) => {
+        let start = null;
+        const duration = 600; // total waktu animasi (ms)
 
-        const animate = () => {
-            op += isUp ? step : -step;
-            op = Math.max(0, Math.min(1, op));
-            el.style.opacity = op.toFixed(2);
+        const animate = (timestamp) => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / duration, 1);
+
+            // easing (ease-out cubic)
+            const eased = isUp 
+                ? progress ** (1/3)   // naik → smooth di awal, cepat di akhir
+                : 1 - (1 - progress) ** 3; // turun → cepat di awal, lambat di akhir
+
+            const target = isUp ? eased : 1 - eased;
+            el.style.opacity = target.toFixed(2);
 
             if (!isUp) {
                 let currentY = parseFloat(el.dataset.y || 0);
-                currentY -= 1; 
+                // geser lebih sedikit ketika mendekati akhir
+                currentY -= (2 * (1 - progress)); 
                 el.dataset.y = currentY;
                 el.style.transform = `translateY(${currentY}px)`;
             }
 
-            if ((isUp && op >= target) || (!isUp && op <= target)) {
-                el.style.opacity = target.toString();
-                res(el);
-            } else {
+            if (progress < 1) {
                 requestAnimationFrame(animate);
+            } else {
+                el.style.opacity = isUp ? "1" : "0";
+                res(el);
             }
         };
 
