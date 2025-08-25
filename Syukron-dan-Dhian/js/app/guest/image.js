@@ -36,25 +36,46 @@ export const image = (() => {
      * @param {string} src 
      * @returns {Promise<void>}
      */
-    
+
     const appendImage = (el, src) => {
-        return new Promise((res, rej) => {
+        return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = src;
 
-            img.decode()
-                .then(() => {
+            img.onload = () => {
+                // Kalau browser support decode()
+                if (img.decode) {
+                    img.decode()
+                        .then(() => {
+                            el.width = img.naturalWidth;
+                            el.height = img.naturalHeight;
+                            el.src = img.src;
+                            progress.complete('image');
+                            resolve();
+                        })
+                        .catch((err) => {
+                            console.warn("decode gagal, fallback ke onload biasa", err);
+                            el.width = img.naturalWidth;
+                            el.height = img.naturalHeight;
+                            el.src = img.src;
+                            progress.complete('image');
+                            resolve();
+                        });
+                } else {
+                    // Browser lama (nggak ada decode)
                     el.width = img.naturalWidth;
                     el.height = img.naturalHeight;
                     el.src = img.src;
                     progress.complete('image');
-                    res();
-                })
-                .catch((err) => {
-                    console.error(err);
-                    progress.invalid('image');
-                    rej(err);
-                });
+                    resolve();
+                }
+            };
+
+            img.onerror = (err) => {
+                console.error("Image load error:", err);
+                progress.invalid('image');
+                reject(err);
+            };
         });
     };
 
