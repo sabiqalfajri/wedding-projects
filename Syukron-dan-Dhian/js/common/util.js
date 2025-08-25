@@ -97,6 +97,13 @@ export const util = (() => {
             op = Math.max(0, Math.min(1, op));
             el.style.opacity = op.toFixed(2);
 
+            if (!isUp) {
+                let currentY = parseFloat(el.dataset.y || 0);
+                currentY -= 2; 
+                el.dataset.y = currentY;
+                el.style.transform = `translateY(${currentY}px)`;
+            }
+
             if ((isUp && op >= target) || (!isUp && op <= target)) {
                 el.style.opacity = target.toString();
                 res(el);
