@@ -99,7 +99,7 @@ export const util = (() => {
 
             if (!isUp) {
                 let currentY = parseFloat(el.dataset.y || 0);
-                currentY -= 2; 
+                currentY -= 1; 
                 el.dataset.y = currentY;
                 el.style.transform = `translateY(${currentY}px)`;
             }
