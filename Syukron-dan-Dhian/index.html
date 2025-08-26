@@ -70,10 +70,52 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" integrity="sha256-zRgmWB5PK4CvTx4FiXsxbHaYRBBjz/rvu97sOC7kzXI=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
     <link rel="stylesheet" href="/Syukron-dan-Dhian/css/guest.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- Dependencies JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha256-NfRUfZNkERrKSFA0c1a8VmCplPDYtpTYj5lQmKe1R/o=" crossorigin="anonymous"></script>
     <script src="/Syukron-dan-Dhian/dist/guest.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiperEl = document.querySelector('.swiper')
+            const prevEl = document.querySelector('.swiper-button-prev')
+            const nextEl = document.querySelector('.swiper-button-next')
+            const paginationEl = document.querySelector('.swiper-pagination')
+
+            console.log('Elements found', {
+                swiper: swiperEl,
+                prevButton: prevEl,
+                nextButton: nextEl,
+                pagination: paginationEl
+            })
+            if(!swiperEl) {
+                console.error('Swiper element not found');
+                return
+            }
+
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+                speed: 900,
+                direction: "horizontal",
+                spaceBetween: 8,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+            })
+        })
+    </script>
+
 </head>
 
 <!-- Jika tidak menggunakan komentar, hapus atribut data-key dan data-url, serta abaikan file dashboard.html. -->
@@ -798,7 +840,7 @@
                                     <img src="/Syukron-dan-Dhian/assets/images/gallery-3.jpg" data-src="/Syukron-dan-Dhian/assets/images/gallery-3.jpg" data-aos="zoom-in" data-aos-duration="800" alt="image 1" class="d-block img-fluid cursor-pointer" style="width: 100%; height: 20.5rem; object-fit: cover;" onclick="undangan.guest.modal(this)">
                                 </div>
                             </div>
-                            <div class="d-flex flex-nowrap justify-content-center gap-2 w-100">
+                            <!-- <div class="d-flex flex-nowrap justify-content-center gap-2 w-100">
                                 <div class="col-6">
                                     <img src="/Syukron-dan-Dhian/assets/images/couple2.jpg" data-src="/Syukron-dan-Dhian/assets/images/couple2.jpg" data-aos="zoom-in" data-aos-duration="800" alt="image 1" class="d-block img-fluid cursor-pointer" style="width: 100%; height: 20.5rem; object-fit: cover;" onclick="undangan.guest.modal(this)">
                                 </div>
@@ -806,6 +848,46 @@
                                     <img src="/Syukron-dan-Dhian/assets/images/couple2.jpg" data-src="/Syukron-dan-Dhian/assets/images/couple2.jpg" data-aos="zoom-in" data-aos-duration="800" alt="image 1" class="d-block img-fluid cursor-pointer" style="width: 100%; height: 10rem; object-fit: cover;" onclick="undangan.guest.modal(this)">
                                     <img src="/Syukron-dan-Dhian/assets/images/couple2.jpg" data-src="/Syukron-dan-Dhian/assets/images/couple2.jpg" data-aos="zoom-in" data-aos-duration="800" alt="image 1" class="d-block img-fluid cursor-pointer" style="width: 100%; height: 10rem; object-fit: cover;" onclick="undangan.guest.modal(this)">
                                 </div>
+                            </div> -->
+                            
+                            <!-- Slider Swiper Image -->
+                             <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-2.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-3.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-2.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-3.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-2.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-3.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" data-src="/Syukron-dan-Dhian/assets/images/slider-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!-- Pagination & Navigation -->
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
