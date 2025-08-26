@@ -231,6 +231,33 @@ html[data-bs-theme="dark"] .bg-white-black {
     z-index: 1;
 } */
 
+.parallax {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    min-height: 200vh;
+}
+
+.parallax-bg {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: url('/Syukron-dan-Dhian/assets/images/overlay-wedding.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    z-index: 0;
+    will-change: transform;
+}
+
+.parallax-content {
+    margin-top: -100vh;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2rem;
+}
+
 @media screen and (max-width: 992px) {
     .width-loading {
         width: 50%;
