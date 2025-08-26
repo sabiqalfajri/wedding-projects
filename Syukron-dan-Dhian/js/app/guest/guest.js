@@ -154,6 +154,13 @@ export const guest = (() => {
     };
 
     /**
+     * @returns {void}
+     */
+    const fullScreen = () => {
+        const btn = document.querySelector('.')
+    }
+
+    /**
      * @param {HTMLButtonElement} button
      * @returns {void}
      */
@@ -161,9 +168,17 @@ export const guest = (() => {
         button.disabled = true;
         document.body.scrollIntoView({ behavior: 'instant' });
         document.getElementById('root').classList.remove('opacity-0');
+        const elem = document.documentElement
 
         slide();
         theme.spyTop();
+        if(elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen()
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        }
 
         // confetti.basicAnimation();
         // util.timeOut(confetti.openAnimation, 1500);
