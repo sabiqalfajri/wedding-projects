@@ -329,14 +329,40 @@ export const guest = (() => {
     /**
      * @returns {void}
      */
+
+        const raw = window.location.search.split('to=');
+        let name = null;
+
+        if (raw.length > 1 && raw[1].length >= 1) {
+            name = window.decodeURIComponent(raw[1]);
+        }
+
+        if (name) {
+
+        }
     const handleLinkWhatsapp = () => {
-        const guestName = document.getElementById('guest-name');
-        const message = [
+        const raw = window.location.search.split('to=');
+        let name = null;
+        let message = '';
+
+        if (raw.length > 1 && raw[1].length >= 1) {
+            name = window.decodeURIComponent(raw[1]);
+        }
+
+        if (name) {
+            message = [
             "Hai Kak,",
-            `Saya ${util.escapeHtml(guestName)}`,
+            `Saya ${util.escapeHtml(name)}`,
             "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
-        ].join("%OA");
-        // const message = `Hai Kak, Saya ${util.escapeHtml(guestName?.getAttribute('data-message'))}` + 'Boleh dibantu untuk informasi layanan undangan digitalsabiq ?'
+            ].join("%0A");            
+        } else {
+            message = [
+            "Hai Kak,",
+            `Saya (Nama)`,
+            "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
+            ].join("%0A");
+        }
+
         const encode = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/6283103882464?text=${encode}`;
 
