@@ -354,7 +354,7 @@ export const guest = (() => {
             "Hai Kak,",
             `Saya ${util.escapeHtml(name)}`,
             "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
-            ].join("%0A");            
+            ].join("\n");            
         } else {
             message = [
             "Hai Kak,",
