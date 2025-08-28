@@ -331,7 +331,12 @@ export const guest = (() => {
      */
     const handleLinkWhatsapp = () => {
         const guestName = document.getElementById('guest-name');
-        const message = `Hai Kak, Saya ${util.escapeHtml(guestName?.getAttribute('data-message'))}` + 'Boleh dibantu untuk informasi layanan undangan digitalsabiq ?'
+        const message = [
+            "Hai Kak,",
+            `Saya ${util.escapeHtml(guestName)}`,
+            "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
+        ].join("%OA");
+        // const message = `Hai Kak, Saya ${util.escapeHtml(guestName?.getAttribute('data-message'))}` + 'Boleh dibantu untuk informasi layanan undangan digitalsabiq ?'
         const encode = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/6283103882464?text=${encode}`;
 
