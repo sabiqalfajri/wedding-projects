@@ -193,7 +193,6 @@ export const guest = (() => {
      */
     const modal = (img) => {
         document.getElementById('button-modal-click').setAttribute('href', img.src);
-        document.getElementById('button-modal-download').setAttribute('data-src', img.src);
 
         const i = document.getElementById('show-modal-image');
         i.src = img.src;
