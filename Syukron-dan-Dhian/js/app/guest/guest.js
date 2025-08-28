@@ -360,7 +360,7 @@ export const guest = (() => {
             "Hai Kak,",
             `Saya (Nama)`,
             "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
-            ].join("%0A");
+            ].join("\n");
         }
 
         const encode = encodeURIComponent(message);
