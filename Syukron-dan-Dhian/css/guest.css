@@ -134,19 +134,7 @@ html[data-bs-theme="dark"] .bg-white-black {
     overflow: hidden !important;
 }
 
-.parallax {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url('/Syukron-dan-Dhian/assets/images/overlay-wedding.webp'); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    z-index: -1;
-}
+
 
 /* fade */
 .fade-up {
