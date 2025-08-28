@@ -206,21 +206,6 @@ html[data-bs-theme="dark"] .bg-white-black {
     position: relative;
 }
 
-.parallax {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("/gambar/backgorund-slide2.webp");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100%;
-  width: 100%;
-  transition: transform 0.2s ease-out;
-  overflow: hidden;
-  z-index: -2;
-}
 
 /* parallax */
 .parallax {
