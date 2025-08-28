@@ -362,7 +362,7 @@ export const guest = (() => {
         }
 
         const encode = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/6283103882464?text=${encode}`;
+        const whatsappUrl = `https://wa.me/6287841651802?text=${encode}`;
 
         window.open(whatsappUrl, '_blank');
     }
