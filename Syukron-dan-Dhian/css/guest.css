@@ -222,15 +222,7 @@ html[data-bs-theme="dark"] .bg-white-black {
   z-index: -2;
 }
 
-.parallax-content {
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: auto;
-    min-height: 200vh;
-    z-index: 1;
-} */
-
+/* parallax */
 .parallax {
     position: relative;
     isolation: isolate;
