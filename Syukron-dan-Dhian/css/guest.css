@@ -127,12 +127,7 @@ html[data-bs-theme="dark"] .bg-white-black {
 .cursor-pointer {
     cursor: pointer;
 }
-/* 
-.parallax-wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden !important;
-}
+
 
 /* fade */
 .fade-up {
