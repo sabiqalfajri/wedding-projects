@@ -351,14 +351,12 @@ export const guest = (() => {
 
         if (name) {
             message = [
-            "Hai Kak,",
-            `Saya ${util.escapeHtml(name)}`,
+            `Hai Kak, Saya ${util.escapeHtml(name)}`,
             "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
             ].join("\n");            
         } else {
             message = [
-            "Hai Kak,",
-            `Saya (Nama)`,
+            "Hai Kak, Saya (Nama)",
             "Boleh dibantu untuk informasi layanan undangan digitalsabiq ?"
             ].join("\n");
         }
