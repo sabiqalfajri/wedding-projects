@@ -148,8 +148,6 @@ html[data-bs-theme="dark"] .bg-white-black {
     z-index: -1;
 }
 
-
-
 /* fade */
 .fade-up {
     opacity: 0;
