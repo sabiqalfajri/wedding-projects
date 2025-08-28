@@ -148,12 +148,9 @@ html[data-bs-theme="dark"] .bg-white-black {
     z-index: -1;
 }
 
-.parallax-content {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-} */
 
+
+/* fade */
 .fade-up {
     opacity: 0;
     transform: translateY(40px);
