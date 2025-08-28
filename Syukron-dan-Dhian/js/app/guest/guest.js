@@ -329,6 +329,18 @@ export const guest = (() => {
     /**
      * @returns {void}
      */
+    const handleLinkWhatsapp = () => {
+        const guestName = document.getElementById('guest-name');
+        const message = `Hai Kak, Saya ${util.escapeHtml(guestName?.getAttribute('data-message'))}` + 'Boleh dibantu untuk informasi layanan undangan digitalsabiq ?'
+        const encode = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/6283103882464?text=${encode}`;
+
+        window.open(whatsappUrl, '_blank');
+    }
+
+    /**
+     * @returns {void}
+     */
     const domLoaded = () => {
         lang.init();
         offline.init();
@@ -422,6 +434,7 @@ export const guest = (() => {
                 modal,
                 showStory,
                 closeInformation,
+                handleLinkWhatsapp
             },
         };
     };
