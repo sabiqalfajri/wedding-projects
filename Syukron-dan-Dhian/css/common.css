@@ -10,6 +10,10 @@ body {
     overflow-x: hidden !important;
 }
 
+#root.row {
+  height: 100dvh;
+}
+
 body,
 div,
 nav,
