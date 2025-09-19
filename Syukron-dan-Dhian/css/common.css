@@ -10,6 +10,9 @@ body {
     overflow-x: hidden !important;
 }
 
+#root.row {
+  max-height: 100vh;
+}
 
 body,
 div,
