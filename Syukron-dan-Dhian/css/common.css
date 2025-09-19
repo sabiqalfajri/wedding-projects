@@ -10,7 +10,9 @@ body {
     overflow-x: hidden !important;
 }
 
-* { outline: 1px solid red; } 
+#root.row {
+  align-items: stretch; 
+}
 
 body,
 div,
