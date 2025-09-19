@@ -264,9 +264,9 @@ html[data-bs-theme="dark"] .bg-white-black {
 
 @media screen and (min-width: 768px) {
     .parallax-bg {
-        background-position: -20% 50% !important;
+        /* background-position: -20% 50% !important; */
         background-repeat: no-repeat;
-        background-size: cover !important;
+        background-size: contain !important;
     }
 }
 
