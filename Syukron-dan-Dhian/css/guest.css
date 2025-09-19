@@ -7,7 +7,6 @@ html {
 }
 
 html, body {
-    overflow: hidden !important;
     box-sizing: border-box !important;
 }
 
