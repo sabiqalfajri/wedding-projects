@@ -119,7 +119,7 @@ html[data-bs-theme="dark"] .bg-white-black {
 
 .bg-cover-home {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     mask-image: linear-gradient(0.5turn, transparent, black 40%, black 60%, transparent);
 }
