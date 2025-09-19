@@ -10,9 +10,6 @@ body {
     overflow-x: hidden !important;
 }
 
-#root.row {
-    align-items: stretch; 
-}
 
 body,
 div,
