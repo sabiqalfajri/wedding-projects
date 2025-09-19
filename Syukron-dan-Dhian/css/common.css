@@ -10,13 +10,6 @@ body {
     overflow-x: hidden !important;
 }
 
-.left-panel{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 58.333%;
-}
 
 body,
 div,
