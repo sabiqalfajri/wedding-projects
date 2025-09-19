@@ -11,9 +11,7 @@ body {
 }
 
 #root.row {
-    min-height: 100vh;
-    max-height: 100vh;
-  align-items: stretch; 
+    align-items: stretch; 
 }
 
 body,
