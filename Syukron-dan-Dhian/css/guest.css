@@ -264,11 +264,7 @@ html[data-bs-theme="dark"] .bg-white-black {
 
 @media screen and (min-width: 768px) {
     .parallax-bg {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        background: url('/Syukron-dan-Dhian/assets/images/bca.jpg');
-        background-position: center;
+        background-position: 20% 50% !important;
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
