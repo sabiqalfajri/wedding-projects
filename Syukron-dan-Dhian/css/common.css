@@ -10,6 +10,7 @@ body {
     overflow-x: hidden !important;
 }
 
+* { outline: 1px solid red; } 
 
 body,
 div,
