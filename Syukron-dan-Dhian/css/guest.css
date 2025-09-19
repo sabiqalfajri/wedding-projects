@@ -262,18 +262,25 @@ html[data-bs-theme="dark"] .bg-white-black {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .parallax-bg {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vw;
+        z-index: 0;
+        will-change: transform;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /* .parallax {
         object-fit: contain;
         background-attachment: scroll;
     } */
 
-    .parallax-bg {
-        background-position: 50% 80%;
-        background-repeat: no-repeat;
-        width: 100vw;
-        z-index: 0;
-        will-change: transform;
+    .parallax {
+        background-attachment: scroll !important;
     }
 }
 
