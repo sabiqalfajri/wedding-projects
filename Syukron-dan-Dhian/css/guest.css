@@ -266,7 +266,7 @@ html[data-bs-theme="dark"] .bg-white-black {
     .parallax-bg {
         background-position: 80% 50% !important;
         background-repeat: no-repeat;
-        background-size: contain !important;
+        background-size: cover !important;
     }
 }
 
