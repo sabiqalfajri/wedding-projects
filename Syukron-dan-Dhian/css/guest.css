@@ -267,9 +267,6 @@ html[data-bs-theme="dark"] .bg-white-black {
         background-position: 80% 50% !important;
         background-repeat: no-repeat;
         background-size: contain !important;
-        width: 100vw;
-        z-index: 0;
-        will-change: transform;
     }
 }
 
