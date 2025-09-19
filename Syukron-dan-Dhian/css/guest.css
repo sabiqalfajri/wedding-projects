@@ -270,7 +270,7 @@ html[data-bs-theme="dark"] .bg-white-black {
     }
 
     .parallax-bg-two {
-        background-position: calc(80% - 200px) 50% !important;
+        background-position: calc(80% - 250px) 40% !important;
         background-repeat: no-repeat;
         background-size: cover !important;
     }
