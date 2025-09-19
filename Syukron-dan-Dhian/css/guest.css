@@ -6,6 +6,11 @@ html {
     -ms-overflow-style: none !important;
 }
 
+html, body {
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
 .with-scrollbar {
     scrollbar-width: auto !important;
     -ms-overflow-style: auto !important;
