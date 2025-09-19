@@ -269,9 +269,8 @@ html[data-bs-theme="dark"] .bg-white-black {
     } */
 
     .parallax-bg {
-        background-position: center;
+        background-position: 50% 80%;
         background-repeat: no-repeat;
-        background-size: contain;
         width: 100vw;
         z-index: 0;
         will-change: transform;
